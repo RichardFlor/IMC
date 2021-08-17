@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor-destaque: #fcc91c;
+
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image:url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-color: #000A;
+    background-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+
+}
+header{
+    color: whitesmoke;   
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;   
+}
+h1{
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 100;
+}
+main{
+    
+    flex-grow: 1;
+    display: flex;
+}
+
+section{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#categorias table{
+    border-spacing: 4px;
+    font-size: 1.5rem;
+}
+#categorias th{
+    background-color: var(--cor-destaque);
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: lighter;
+}
+
+#categorias td{
+    background-color: var(--cor-destaque);
+    width: 250px;
+    height: 50px;
+    padding: 15px;
+    font-weight: lighter;
+
+}
+
+
+#calculadora form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#calculadora .campo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#calculadora button{
+    height: 50px;
+    background-color: var(--cor-destaque);
+    font-size: 1rem;
+    border-radius: 5px;
+
+}
+
+#calculadora #resultado{
+    height: 100px;
+    background-color: var(--cor-destaque);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+#calculadora .unidade::before{
+    content: attr(data-unidade);
+    background-color:var(--cor-destaque);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+
+}
+
+#calculadora input{
+    height: 50px;
+    border: 2px solid var(--cor-destaque);
+    background-color: transparent;
+    outline: none;
+    color:white;
+    padding: 10px;
+    border-radius: 5px;
+
+
+}
+
+label{
+    color: turquoise;
+}
+
+footer{
+    color: whitesmoke;
+    height: 40px;
+    text-align: center;
+    font-weight: 100;
+    font-style: italic;
+    font-size: .8rem;
+    
+}
+
+
+@media (max-width: 768px){
+   
+    #categorias {
+        background-color: tomato;
+        display: none;
+    }
+    #calculadora form{
+        width: 80%;
+    }
+}
