@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="calculo.js" defer> </script> 
+    <script src="professor.js" defer> </script> 
     <title>IMC</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
                         <td>Obesidade grau II</td>
                     </tr>
                     <tr>
-                        <td> IMC maiores que 40,0</td>
+                        <td> IMC acima de 40,0</td>
                         <td>Obesidade grau III</td>
                     </tr>
                 </tbody>
@@ -55,15 +55,15 @@
             <form>
                 <div class="campo">
                     <label for="">Nome: </label>
-                    <input type="text" id='nome'>
+                    <input type="text" id='nome' required>
                 </div>
                 <div class="campo unidade" data-unidade="metros">
                     <label for=""> Altura: </label>
-                    <input type="text" id='altura'>
+                    <input type="number" id='altura' required step="any">
                 </div>
                 <div class="campo unidade" data-unidade="quilos">
                     <label for="">Peso: </label>
-                    <input type="text" id='peso'>
+                    <input type="number" id='peso' required step="any">
                 </div>
                 <button type="button" id="calcular">Calcular</button>
                 <div id='resultado'>Resultado</div>
